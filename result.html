@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Ação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Se liga ai Backend</h1>
+        <p id="resultMessage"></p>
+        <a href="index.html" class="button">Voltar</a>
+    </div>
+    <script>
+        // Função para exibir a mensagem de resultado
+        function displayResult() {
+            const params = new URLSearchParams(window.location.search);
+            const type = params.get("type");
+            const name = params.get("name");
+            const bookName = params.get("bookName");
+            const bookAuthor = params.get("bookAuthor");
+
+            let message = "";
+
+            if (type === "buscar") {
+                message = `${name} escolheu buscar o livro "${bookName}". Eu já fiz a minha parte, vou descansar minha beleza. Beijos, Frontend.`;
+            } else if (type === "adicionar") {
+                message = `${name} adicionou o livro "${bookName}" com o autor "${bookAuthor}. Dá teus pulo!".`;
+            }
+
+            document.getElementById("resultMessage").textContent = message;
+        }
+
+        // Executa displayResult() automaticamente quando a result.html é carregada
+        if (window.location.pathname.includes("result.html")) {
+            window.onload = displayResult;
+        }
+    </script>
+</body>
+
+</html>

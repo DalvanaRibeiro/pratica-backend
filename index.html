@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à Biblioteca</h1>
+        <p>Digite seu nome:</p>
+        <input type="text" id="username" placeholder="Seu nome" />
+        
+        <p>Escolha uma ação:</p>
+        <select id="action">
+            <option value="">Selecione uma ação</option>
+            <option value="buscar">Buscar Livro</option>
+            <option value="adicionar">Adicionar Livro</option>
+            <option value="atualizar">Atualizar Livro</option>
+            <option value="deletar">Deletar Livro</option>
+        </select>
+
+        <button class="button" onclick="proceed()">Continuar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

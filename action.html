@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ação da Biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Olá, <span id="displayName"></span>!</h1>
+        <p id="actionDescription"></p>
+
+        <!-- Formulário para buscar ou cadastrar livro -->
+        <div id="formContainer" style="display: none;">
+            <h2 id="formTitle"></h2>
+            <input type="text" id="bookName" placeholder="Nome do Livro" />
+            <input type="text" id="bookAuthor" placeholder="Autor do Livro" />
+            <button class="button" id="submitBtn"></button>
+        </div>
+
+        <a href="index.html" class="button">Voltar</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
